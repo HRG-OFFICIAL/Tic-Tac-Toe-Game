@@ -1,5 +1,6 @@
 const statusDisplay = document.querySelector('.game-status');
 const cells = document.querySelectorAll('.cell');
+const restartButton = document.querySelector('.game-restart');
 
 let gameActive = true;
 let currentPlayer = "X";
@@ -64,8 +65,22 @@ function handleRestartGame() {
     gameState.fill("");
     statusDisplay.innerHTML = currentPlayerTurn();
     cells.forEach(cell => cell.innerHTML = "");
+    cells.forEach(cell => cell.removeAttribute('disabled'));
+}
+
+function handleGameOver() {
+    cells.forEach(cell => cell.setAttribute('disabled', true));
+    restartButton.style.display = "block";
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
+handleGameOver();
 
+const checkGameOver = () => {
+    if (!gameActive) {
+        handleGameOver();
+    }
+};
+
+checkGameOver();
