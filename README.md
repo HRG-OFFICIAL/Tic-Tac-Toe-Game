@@ -2,7 +2,7 @@
 
 A modern, feature-rich Tic-Tac-Toe game built with TypeScript, Vite, and cutting-edge web technologies. Experience classic gameplay with contemporary design and advanced features.
 
-![Game Preview](screenshots/light-theme.png)
+![Game Preview](screenshots/screen.jpeg)
 *Clean, modern interface with responsive design*
 
 ## ✨ Features
@@ -198,10 +198,34 @@ The game offers extensive customization through the settings modal:
 - **Performance Focused**: Hardware-accelerated animations
 - **Accessibility**: Respects user motion preferences
 
-### Responsive Design
-- **Mobile-First**: Optimized for touch devices
-- **Flexible Layout**: Adapts to any screen size
-- **Touch-Friendly**: Large touch targets and intuitive gestures
+### Responsive Design System
+- **Mobile-First Approach**: Optimized for touch devices with progressive enhancement
+- **Comprehensive Breakpoints**: 12+ device-specific breakpoints from 320px to 2560px+
+- **Flexible Layout**: Adapts seamlessly to any screen size and orientation
+- **Touch-Friendly**: Large touch targets (44px minimum) and intuitive gestures
+- **Accessibility**: Respects user preferences for reduced motion and color schemes
+- **Print Support**: Optimized print styles for game boards
+- **High DPI Support**: Crisp rendering on retina and high-resolution displays
+
+#### Device Breakpoints
+- **Extra Small Mobile**: 320px - 374px (iPhone 5, small phones)
+- **Small Mobile**: 375px - 413px (iPhone SE, small phones)
+- **Medium Mobile**: 414px - 479px (iPhone 11, medium phones)
+- **Large Mobile**: 480px - 639px (Large phones, small tablets)
+- **Small Tablets**: 640px - 767px (iPad Mini, small tablets)
+- **Tablets**: 768px - 1023px (iPads, tablets)
+- **Large Tablets**: 1024px - 1279px (iPad Pro, large tablets)
+- **Small Desktops**: 1280px - 1439px (Small laptops, desktops)
+- **Medium Desktops**: 1440px - 1919px (Standard desktops)
+- **Large Desktops**: 1920px - 2559px (Large monitors)
+- **Ultra-wide**: 2560px+ (Ultra-wide displays)
+
+#### Special Considerations
+- **Landscape Mobile**: Optimized layout for mobile landscape orientation
+- **Touch Devices**: Enhanced touch targets and gesture support
+- **Reduced Motion**: Respects `prefers-reduced-motion` accessibility setting
+- **Dark Mode**: Automatic dark theme based on system preferences
+- **Print Styles**: Clean, printable game boards
 
 ## 🤝 Contributing
 

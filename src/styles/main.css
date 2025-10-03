@@ -1225,6 +1225,313 @@ body {
 }
 
 /* Responsive Design */
+
+/* Tablet and Mobile Layout */
+@media (max-width: 768px) {
+  .panels-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-panel {
+    order: 1;
+    max-width: 100%;
+  }
+  
+  .history-panel {
+    order: 2;
+    max-width: 100%;
+  }
+  
+  .game-controls-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .score-display {
+    gap: 0.5rem;
+  }
+  
+  .score-item {
+    min-width: 50px;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .app-title {
+    font-size: 1.25rem;
+  }
+  
+  .title-icon {
+    font-size: 1.75rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .app-title {
+    font-size: 1.1rem;
+  }
+  
+  .title-icon {
+    font-size: 1.5rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .game-cell {
+    min-height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .btn-control {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .score-display {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-around;
+  }
+  
+  .score-item {
+    min-width: 60px;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* Extra Small Mobile Devices (330px - 374px) */
+@media (max-width: 374px) {
+  .app-container {
+    padding: 0.25rem;
+  }
+  
+  .panels-container {
+    gap: 0.5rem;
+  }
+  
+  .game-panel {
+    padding: 0.75rem;
+    min-height: 300px;
+  }
+  
+  .history-panel {
+    padding: 0.75rem;
+    min-height: 200px;
+    max-height: 250px;
+  }
+  
+  .app-title {
+    font-size: 1rem;
+  }
+  
+  .title-icon {
+    font-size: 1.25rem;
+  }
+  
+  .game-cell {
+    min-height: 45px;
+    font-size: 1.25rem;
+  }
+  
+  .btn-control {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .score-display {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-around;
+  }
+  
+  .score-item {
+    min-width: 50px;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .modal-content {
+    width: 98%;
+    margin: 0.25rem;
+  }
+  
+  .game-board {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+  
+  .game-controls-row {
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+}
+
+  
+  .modal-content {
+    width: 98%;
+    margin: 0.25rem;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .app-header {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .app-title {
+    font-size: 1.2rem;
+  }
+  
+  .panels-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .game-panel {
+    flex: 1;
+  }
+  
+  .history-panel {
+    flex: 0 1 200px;
+    max-height: 300px;
+  }
+  
+  .game-cell {
+    min-height: 35px;
+    font-size: 1.5rem;
+  }
+  
+  .btn-control {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .modal-content {
+    width: 90%;
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn-control {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .game-cell {
+    min-height: 50px;
+  }
+  
+  .btn-theme-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .modal-close {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .game-cell {
+    border-width: 0.5px;
+  }
+  
+  .btn-control {
+    border-width: 1px;
+  }
+  
+  .modal-content {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .game-cell {
+    transition: none;
+  }
+  
+  .btn-control {
+    transition: none;
+  }
+  
+  .modal-container {
+    transition: none;
+  }
+}
+
+/* Dark Mode System Preferences */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg-primary: #111111;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #262626;
+    --bg-card: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e5e5;
+    --text-muted: #a0a0a0;
+    --border-color: #404040;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .app-container {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .btn-control,
+  .btn-theme-toggle,
+  .modal-container {
+    display: none !important;
+  }
+  
+  .panels-container {
+    flex-direction: column;
+  }
+  
+  .game-board {
+    border: 2px solid black;
+  }
+  
+  .game-cell {
+    border: 1px solid black;
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ========================================
+   LEGACY BREAKPOINTS (Backward Compatibility)
+   ======================================== */
+
+/* Legacy Tablet Breakpoint */
 @media (max-width: 768px) {
   .panels-container {
     flex-direction: column;
