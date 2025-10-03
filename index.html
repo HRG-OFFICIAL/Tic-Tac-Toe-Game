@@ -3,27 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="game-section">
-        <h1 class="game-title">Tic-Tac-Toe</h1><hr>
-        <div class="game-container">
-            <!-- Tic-Tac-Toe cells -->
-            <div data-cell-index="0" class="cell"></div>
-            <div data-cell-index="1" class="cell"></div>
-            <div data-cell-index="2" class="cell"></div>
-            <div data-cell-index="3" class="cell"></div>
-            <div data-cell-index="4" class="cell"></div>
-            <div data-cell-index="5" class="cell"></div>
-            <div data-cell-index="6" class="cell"></div>
-            <div data-cell-index="7" class="cell"></div>
-            <div data-cell-index="8" class="cell"></div>
-        </div>
-        <h2 class="game-status"></h2>
-        <button class="game-restart">Restart Game</button>
-    </section>
-    <script src="script.js"></script>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">
+                Tic-Tac-Toe Game
+            </h1>
+            <div class="header-controls">
+                <button id="theme-toggle" class="btn btn-theme-toggle" title="Toggle Theme">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div id="game-status" class="game-status-display-main">Player X's turn</div>
+            
+            <div id="game-controls" class="game-controls-row">
+                <!-- Controls will be rendered here by GameControls component -->
+            </div>
+            
+            <div class="panels-container">
+                <section class="game-panel" aria-labelledby="game-panel-title">
+                    <h2 id="game-panel-title" class="visually-hidden">Game Panel</h2>
+                    
+                    <div class="score-display">
+                        <div class="score-item">
+                            <span class="player-symbol">X</span>
+                            <span class="score-value" id="score-x">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="player-symbol">O</span>
+                            <span class="score-value" id="score-o">0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="player-symbol">Draws</span>
+                            <span class="score-value" id="score-draws">0</span>
+                        </div>
+                    </div>
+                    
+                    <div id="game-board" class="game-board" role="grid" aria-label="Tic-Tac-Toe Board"></div>
+                </section>
+
+                <aside class="history-panel" aria-labelledby="history-panel-title">
+                    <h2 id="history-panel-title">Move History</h2>
+                    <div id="game-history" class="history-log"></div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <!-- Settings button moved to game controls -->
+        </footer>
+    </div>
+
+    <div id="settings-modal-container" class="modal-container"></div>
+
+    <script type="module" src="src/app.ts"></script>
 </body>
 </html>
