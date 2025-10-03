@@ -1,7 +1,6 @@
 import type { CellValue, WinningCondition } from '@/types/game';
 import { useGameStore } from '@/store/gameStore';
 import { AnimationManager } from '@/utils/animationManager';
-import { SoundManager } from '@/utils/soundManager';
 
 interface GameBoardProps {
   onCellClick: (index: number) => void;
@@ -15,7 +14,6 @@ export class GameBoard {
   private winningCondition?: WinningCondition | null;
   private boardSize: number = 3;
   private animationManager = AnimationManager.getInstance();
-  private soundManager = SoundManager.getInstance();
 
   constructor(container: HTMLElement, props: GameBoardProps) {
     this.container = container;

@@ -13,7 +13,6 @@ export class TicTacToeApp {
   private gameBoard!: GameBoard;
   private gameControls!: GameControls;
   private gameStatus!: GameStatus;
-  private settingsModal!: SettingsModal;
   private gameHistory!: GameHistory;
   private soundManager = SoundManager.getInstance();
   private animationManager = AnimationManager.getInstance();
@@ -39,7 +38,7 @@ export class TicTacToeApp {
 
     this.gameControls = new GameControls(controlsContainer);
     this.gameStatus = new GameStatus(statusContainer);
-    this.settingsModal = new SettingsModal(settingsContainer);
+    new SettingsModal(settingsContainer);
     this.gameHistory = new GameHistory(historyContainer);
 
     // Subscribe to store changes
