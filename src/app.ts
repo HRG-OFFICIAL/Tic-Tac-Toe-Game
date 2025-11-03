@@ -178,7 +178,7 @@ export class TicTacToeApp {
   private updateThemeIcon(theme: 'light' | 'dark'): void {
     const themeIcon = document.getElementById('theme-icon');
     if (themeIcon) {
-      themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+      themeIcon.textContent = theme === 'light' ? 'Dark' : 'Light';
     }
   }
 }

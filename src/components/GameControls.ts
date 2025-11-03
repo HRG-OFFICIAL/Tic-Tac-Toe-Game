@@ -14,18 +14,10 @@ export class GameControls {
 
   render(): void {
     this.container.innerHTML = `
-      <button id="reset-game" class="btn btn-control">
-        <span>🔄</span> New Game
-      </button>
-      <button id="undo-move" class="btn btn-control">
-        <span>↩</span> Undo
-      </button>
-      <button id="reset-scores" class="btn btn-control">
-        <span>📊</span> Reset Scores
-      </button>
-      <button id="settings-btn" class="btn btn-control">
-        <span>⚙️</span> Settings
-      </button>
+      <button id="reset-game" class="btn-control">New Game</button>
+      <button id="undo-move" class="btn-control">Undo</button>
+      <button id="reset-scores" class="btn-control">Reset Scores</button>
+      <button id="settings-btn" class="btn-control">Settings</button>
     `;
   }
 

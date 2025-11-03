@@ -113,7 +113,8 @@ export const useGameStore = create<GameStore>()(
       const newHistory = [...state.gameHistory];
       newHistory.pop();
 
-      const newBoard = Array(9).fill(null);
+      const totalCells = state.settings.boardSize * state.settings.boardSize;
+      const newBoard = Array(totalCells).fill(null);
       let newMoveCount = 0;
       let newCurrentPlayer: 'X' | 'O' = 'X';
 

@@ -145,9 +145,9 @@ export class GameLogic {
   static getGameStatusMessage(state: GameState): string {
     switch (state.gameStatus) {
       case 'won':
-        return `Player ${state.winner} wins! 🎉`;
+        return `Player ${state.winner} wins.`;
       case 'draw':
-        return "It's a draw! 🤝";
+        return "Game drawn.";
       case 'playing':
       default:
         return `Player ${state.currentPlayer}'s turn`;

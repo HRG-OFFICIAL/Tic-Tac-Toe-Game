@@ -82,6 +82,11 @@ html {
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-optical-sizing: auto;
 }
 
 body {
@@ -140,7 +145,7 @@ body {
 }
 
 .btn-theme-toggle:hover {
-  background-color: var(--success-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
   color: #ffffff;
   transform: scale(1.1);
 }
@@ -269,6 +274,20 @@ body {
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
+}
+
+.btn-control:disabled,
+.btn-control.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-control:disabled:hover,
+.btn-control.disabled:hover {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
 }
 
 .btn-control span {
